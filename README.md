@@ -20,5 +20,5 @@ During 6 years, I worked for a US Company ( Bioclinica ). The time spent with th
 
 More infos on my Website : www.ormaa.fr
 
-
+![Markdown preferences pane](https://static.wixstatic.com/media/012a00_d523640eca3540258ba0fecfbd98023e~mv2.jpg/v1/fill/w_107,h_146,al_c,q_80,usm_0.66_1.00_0.01/012a00_d523640eca3540258ba0fecfbd98023e~mv2.jpg)
 
