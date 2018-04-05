@@ -24,27 +24,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Br-do-tZy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkc-fR-bsx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xkc-fR-bsx">
                                         <rect key="frame" x="40" y="112" width="239" height="289"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.57795306219999998" green="0.69282168060000004" blue="0.89887152780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="239" id="XcV-XK-CvR"/>
+                                            <constraint firstAttribute="height" constant="289" id="xvS-Mu-MuB"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scanned document" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4o-W8-uNt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="document scanné" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4o-W8-uNt">
                                         <rect key="frame" x="62" y="83" width="178" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5mk-rV-3sy" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="427" width="107" height="63"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5mk-rV-3sy" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                                        <rect key="frame" x="112" y="429" width="96" height="96"/>
                                         <color key="backgroundColor" red="0.42859709480000002" green="0.6423692097" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Start scanner">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="96" id="6g0-6o-sV6"/>
+                                            <constraint firstAttribute="width" constant="96" id="bEK-dL-JO9"/>
+                                        </constraints>
+                                        <state key="normal" title="Start">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="32"/>
+                                                <real key="value" value="48"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -61,6 +68,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="PNy-U0-36d"/>
+                                    <constraint firstItem="xkc-fR-bsx" firstAttribute="centerY" secondItem="8Br-do-tZy" secondAttribute="centerY" constant="-27.5" id="QLQ-sP-Cbd"/>
+                                    <constraint firstItem="5mk-rV-3sy" firstAttribute="centerX" secondItem="8Br-do-tZy" secondAttribute="centerX" id="kcx-np-fVi"/>
+                                    <constraint firstItem="5mk-rV-3sy" firstAttribute="centerY" secondItem="8Br-do-tZy" secondAttribute="centerY" constant="193" id="vTP-1m-dfO"/>
+                                    <constraint firstItem="xkc-fR-bsx" firstAttribute="centerX" secondItem="8Br-do-tZy" secondAttribute="centerX" id="vzi-Pc-miy"/>
                                     <constraint firstAttribute="height" constant="568" id="w93-ey-UfQ"/>
                                 </constraints>
                             </view>

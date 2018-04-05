@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIVC_EditEdgesPoints" customModule="SegescanAppView" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIVC_EditEdgesPoints" customModule="CameraDocScanner" customModuleProvider="target">
             <connections>
                 <outlet property="activityAnimation" destination="nfE-Co-QIV" id="MOk-Cb-sT3"/>
                 <outlet property="edgesView" destination="y4f-X2-y2f" id="7pk-HP-34Q"/>
@@ -36,7 +36,7 @@
                         <constraint firstAttribute="width" secondItem="KHr-WR-SQ7" secondAttribute="height" multiplier="3:4" id="wF1-Kq-4KC"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4f-X2-y2f" customClass="EditableEdgesView" customModule="SegescanAppView" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4f-X2-y2f" customClass="EditableEdgesView" customModule="CameraDocScanner" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -45,14 +45,14 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="het-OH-O9o" userLabel="FondBordeaux">
                     <rect key="frame" x="0.0" y="502" width="375" height="165"/>
-                    <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.65216483000000003" green="0.69397819449999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLT-Cl-zTn">
                     <rect key="frame" x="112.5" y="615" width="150" height="42"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfb-RK-FhC" customClass="UIButtonDesignable" customModule="SegescanAppView" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfb-RK-FhC" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="80" height="42"/>
-                            <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.30283251360000002" green="0.82234430810000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="fGF-iB-pmX"/>
                                 <constraint firstAttribute="height" constant="42" id="lp6-HA-dFG"/>
@@ -76,9 +76,9 @@
                                 <action selector="closeBtnClick:" destination="-1" eventType="touchUpInside" id="c5d-pV-ptd"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lo-xq-cK1" customClass="UIButtonDesignable" customModule="SegescanAppView" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lo-xq-cK1" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
                             <rect key="frame" x="90" y="0.0" width="60" height="42"/>
-                            <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.30283251360000002" green="0.82234430810000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="8uQ-ll-qH2"/>
                                 <constraint firstAttribute="width" constant="60" id="W0Y-70-gKb"/>
@@ -113,7 +113,7 @@
                         <constraint firstItem="0lo-xq-cK1" firstAttribute="top" secondItem="PLT-Cl-zTn" secondAttribute="top" id="pXw-2m-6JK"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ike-tn-zcM" customClass="UIImageViewDesignable" customModule="SegescanAppView" customModuleProvider="target">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ike-tn-zcM" customClass="UIImageViewDesignable" customModule="CameraDocScanner" customModuleProvider="target">
                     <rect key="frame" x="139" y="285" width="128" height="128"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>

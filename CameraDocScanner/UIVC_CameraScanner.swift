@@ -137,14 +137,30 @@ CameraControllerProtocol, CropAndTransformImageProtocol {
     
     
     
+//    func startWait() {
+//        //Thread.detachNewThreadSelector(#selector(self.threadStartAnimating), toTarget: self, with: nil)
+//        usleep(500000) // 0.5 sec
+//    }
+//    func threadStartAnimating(_ data: Any) {
+//        self.activityAnimation.startAnimating()
+//    }
+//    
+//    func stopWait() {
+//        DispatchQueue.main.async {
+//            self.activityAnimation.stopAnimating()
+//        }
+//    }
     func startWait() {
-        Thread.detachNewThreadSelector(#selector(self.threadStartAnimating), toTarget: self, with: nil)
-        usleep(500000) // 0.5 sec
+        DispatchQueue.main.async {
+            self.activityAnimation.startAnimating()
+        }
+        
+        let backgroundQueue = DispatchQueue(label: "fr.ormaa.app", qos: .background, target: nil)
+        backgroundQueue.sync {
+            usleep(500000)
+            print("wait ended")
+        }
     }
-    func threadStartAnimating(_ data: Any) {
-        self.activityAnimation.startAnimating()
-    }
-    
     func stopWait() {
         DispatchQueue.main.async {
             self.activityAnimation.stopAnimating()

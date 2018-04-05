@@ -298,7 +298,9 @@ public class CameraController: UIViewController, AVCaptureVideoDataOutputSampleB
         // Here you collect each frame and process it
         if (connection.isVideoOrientationSupported){
             //connection.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
-            connection.videoOrientation = orientation! //AVCaptureVideoOrientation.portrait
+            if self.orientation != nil {
+                connection.videoOrientation = orientation! //AVCaptureVideoOrientation.portrait
+            }
         }
         if (connection.isVideoMirroringSupported) {
             //connection.videoMirrored = true

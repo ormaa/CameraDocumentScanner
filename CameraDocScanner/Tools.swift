@@ -202,7 +202,7 @@ public class Tools: UIViewController {
     
     // Create a CVPixelBuffer, from a CGImage
     //
-    public func CGImageToPixelBuffer(image: CGImage) -> CVPixelBuffer {
+    public func CGImageToPixelBuffer_old(image: CGImage) -> CVPixelBuffer {
         
         let frameSize = CGSize(width: CGFloat(image.width), height: CGFloat(image.height))
         
@@ -235,6 +235,46 @@ public class Tools: UIViewController {
         CVPixelBufferUnlockBaseAddress(buffer!, CVPixelBufferLockFlags(rawValue: 0));
         return buffer! //.memory!
     }
+    
+    
+    // Create a CVPixelBuffer, from a CGImage
+    //
+    func CGImageToPixelBuffer(image: CGImage) -> CVPixelBuffer {
+        
+        let frameSize = CGSize(width: CGFloat(image.width), height: CGFloat(image.height))
+        
+        // stupid CFDictionary stuff
+        //        let keys: [CFString] = [kCVPixelBufferCGImageCompatibilityKey, kCVPixelBufferCGBitmapContextCompatibilityKey]
+        //        let values: [CFTypeRef] = [kCFBooleanTrue, kCFBooleanTrue]
+        //        let keysPointer = UnsafeMutablePointer<UnsafePointer. //.allocate(capacity: 1)
+        //        let valuesPointer =  UnsafeMutablePointer<UnsafePointer.allocate(capacity: 1)
+        //        keysPointer.initialize(to: keys)
+        //        valuesPointer.initialize(to: values)
+        
+        let options: CFDictionary? = nil
+        // let options = CFDictionaryCreate(kCFAllocatorDefault, keysPointer, valuesPointer, keys.count, UnsafePointer<CFDictionaryKeyCallBacks>(), UnsafePointer<CFDictionaryValueCallBacks>())
+        
+        //let buffer = UnsafeMutablePointer<CVPixelBuffer?>.allocate(capacity: 1)
+        var buffer: CVPixelBuffer? = nil
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(frameSize.width), Int(frameSize.height), kCVPixelFormatType_32ARGB, options, &buffer)
+        //print("CGImageToPixelBuffer status: " + String(describing: status))
+        
+        CVPixelBufferLockBaseAddress(buffer!, CVPixelBufferLockFlags(rawValue: 0));
+        let bufferData = CVPixelBufferGetBaseAddress(buffer!);
+        
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+        let context = CGContext(data: bufferData, width: Int(frameSize.width),
+                                height: Int(frameSize.height), bitsPerComponent: 8, bytesPerRow: 4*Int(frameSize.width), space: rgbColorSpace,
+                                bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue);
+        
+        context?.draw(image, in: CGRect(x: 0, y: 0, width: CGFloat(image.width), height: CGFloat(image.height))) //, byTiling: image)
+        
+        CVPixelBufferUnlockBaseAddress(buffer!, CVPixelBufferLockFlags(rawValue: 0));
+        return buffer! //.memory!
+    }
+    
+    
+    
     
     
     

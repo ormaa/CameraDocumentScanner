@@ -22,8 +22,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS2-AR-hMy">
-                                <rect key="frame" x="90" y="303" width="195" height="61"/>
-                                <string key="text">Olivier Robin
+                                <rect key="frame" x="61" y="303" width="253" height="61"/>
+                                <string key="text">Caméra - Scanner de documents
 www.ormaa.fr
 ©2016-2017 olivier Robin</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>

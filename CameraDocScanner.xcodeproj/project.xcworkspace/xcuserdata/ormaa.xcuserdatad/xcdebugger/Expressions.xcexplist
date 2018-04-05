@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CameraController.captureOutput(_:didOutputSampleBuffer:from:):CameraController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "orientation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

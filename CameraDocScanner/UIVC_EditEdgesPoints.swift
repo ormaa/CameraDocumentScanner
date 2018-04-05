@@ -115,7 +115,9 @@ class UIVC_EditEdgesPoints: UIViewController {
             }
             
             self.threadCropAlive = true
-            Thread.detachNewThreadSelector(#selector(self.threadStartCrop), toTarget: self, with: nil)
+           
+            // this does not work anymore in swift 4.1 !!!!
+            // Thread.detachNewThreadSelector(#selector(self.threadStartCrop), toTarget: self, with: nil)
         }
     }
     
@@ -123,7 +125,16 @@ class UIVC_EditEdgesPoints: UIViewController {
         threadCropAlive = false
     }
     func startWait() {
-        Thread.detachNewThreadSelector(#selector(self.threadStartAnimating), toTarget: self, with: nil)
+        //Thread.detachNewThreadSelector(#selector(self.threadStartAnimating), toTarget: self, with: nil)
+        DispatchQueue.main.async {
+            self.activityAnimation.startAnimating()
+        }
+        
+        let backgroundQueue = DispatchQueue(label: "fr.ormaa.app", qos: .background, target: nil)
+        backgroundQueue.sync {
+            usleep(500000)
+            print("wait ended")
+        }
     }
     func threadStartAnimating(_ data: Any) {
         self.activityAnimation.startAnimating()
